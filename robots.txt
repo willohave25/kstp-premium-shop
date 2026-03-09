@@ -1,0 +1,21 @@
+# Robots.txt - KSTP Premium
+# https://shop.kstp-premium.com
+
+User-agent: *
+Allow: /
+
+# Pages autorisées
+Allow: /index.html
+Allow: /vins.html
+Allow: /champagnes.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /cgv.html
+Allow: /mentions.html
+Allow: /Confidentialite.html
+
+# Bloquer fichier Google Search Console
+Disallow: /googleb018582d46784297.html
+
+# Sitemap
+Sitemap: https://shop.kstp-premium.com/sitemap.xml
