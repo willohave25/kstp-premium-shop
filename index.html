@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vente en gros de Champagne et Vins à Reims. Découvrez notre sélection exclusive de champagnes millésimés et vins d'exception pour professionnels.">
-    <meta name="keywords" content="champagne gros, vin gros, reims, champagne millésimé, vin rouge, vin blanc, vin rosé, grossiste champagne">
+    <meta name="description" content="KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy pour l'Afrique. Vente en gros Champagne et Vins à Reims.">
+    <meta name="keywords" content="champagne thomas pavy, champagne gros afrique, vin gros, reims, champagne millésimé, exclusivité afrique, grossiste champagne">
     <meta name="author" content="KSTP Premium">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shop.kstp-premium.com/">
-    <meta property="og:title" content="KSTP Premium - Vente en Gros Champagne & Vins à Reims">
-    <meta property="og:description" content="Votre expert en vente en gros de champagnes et vins d'exception à Reims.">
+    <meta property="og:title" content="KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique">
+    <meta property="og:description" content="Exclusivité Afrique : Champagnes Thomas Pavy en vente en gros. Votre expert champagnes et vins d'exception à Reims.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -24,7 +24,302 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <title>Vente en gros de Champagne et Vins à Reims – KSTP Premium</title>
+    <title>KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique | Vente en Gros Reims</title>
+    
+    <style>
+    /* ===== HERO CAROUSEL THOMAS PAVY - EXCLUSIVITÉ AFRIQUE ===== */
+    
+    .thomas-pavy-hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        overflow: hidden;
+        margin-top: 80px;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: 1;
+    }
+
+    .carousel-slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .slide-background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(139, 0, 0, 0.85) 0%, rgba(26, 26, 26, 0.7) 100%);
+        z-index: 1;
+    }
+
+    .slide-content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+        animation: slideContentFadeIn 1s ease-out;
+    }
+
+    @keyframes slideContentFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .exclusivity-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--color-gold);
+        color: var(--color-dark);
+        padding: 0.7rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        animation: badgePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 6px 30px rgba(212, 175, 55, 0.6);
+        }
+    }
+
+    .badge-icon {
+        font-size: 1.3rem;
+    }
+
+    .slide-subtitle {
+        font-size: 1.3rem;
+        color: var(--color-gold);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+
+    .slide-title {
+        font-family: var(--font-primary);
+        font-size: clamp(3.5rem, 8vw, 6rem);
+        font-weight: 900;
+        color: white;
+        margin-bottom: 1.5rem;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+        line-height: 1.1;
+    }
+
+    .slide-description {
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.95);
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        line-height: 1.8;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide-actions {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-large {
+        padding: 1.2rem 3rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-large:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
+        font-size: 2rem;
+    }
+
+    .carousel-control:hover {
+        background: var(--color-gold);
+        border-color: var(--color-gold);
+        color: var(--color-dark);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-control.prev {
+        left: 2rem;
+    }
+
+    .carousel-control.next {
+        right: 2rem;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        z-index: 10;
+    }
+
+    .indicator {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .indicator:hover {
+        background: rgba(255, 255, 255, 0.7);
+        transform: scale(1.2);
+    }
+
+    .indicator.active {
+        background: var(--color-gold);
+        border-color: var(--color-gold);
+        width: 40px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .thomas-pavy-hero {
+            height: 85vh;
+            min-height: 600px;
+            margin-top: 70px;
+        }
+        
+        .slide-title {
+            font-size: clamp(2.5rem, 10vw, 4rem);
+        }
+        
+        .slide-description {
+            font-size: 1.1rem;
+            padding: 0 1rem;
+        }
+        
+        .slide-actions {
+            flex-direction: column;
+            width: 100%;
+            padding: 0 2rem;
+        }
+        
+        .btn-large {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+        
+        .carousel-control {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+        }
+        
+        .carousel-control.prev {
+            left: 1rem;
+        }
+        
+        .carousel-control.next {
+            right: 1rem;
+        }
+        
+        .exclusivity-badge {
+            font-size: 0.75rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .slide-subtitle {
+            font-size: 1rem;
+        }
+        
+        .carousel-indicators {
+            bottom: 2rem;
+        }
+        
+        .indicator {
+            width: 10px;
+            height: 10px;
+        }
+        
+        .indicator.active {
+            width: 30px;
+        }
+    }
+    </style>
 </head>
 <body>
     
@@ -51,18 +346,135 @@
         </nav>
     </header>
     
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="hero-vineyard.jpg" alt="Vignobles de Champagne à Reims" class="hero-background">
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-            <p class="hero-subtitle">Vente en Gros depuis Reims</p>
-            <h1>Vente en gros de Champagne et Vins à Reims</h1>
-            <p>Découvrez notre sélection exclusive de champagnes millésimés et vins d'exception pour professionnels</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="champagnes.html" class="btn btn-primary">Nos Champagnes</a>
-                <a href="vins.html" class="btn btn-gold">Nos Vins</a>
-                <a href="contact.html" class="btn btn-outline">Demander un Devis</a>
+    <!-- HERO CAROUSEL THOMAS PAVY - EXCLUSIVITÉ AFRIQUE -->
+    <section class="thomas-pavy-hero">
+        <div class="carousel-container">
+            
+            <!-- SLIDE 1 - TRADITION -->
+            <div class="carousel-slide active">
+                <img src="tradition-scene.jpg" alt="Champagne Thomas Pavy Tradition" class="slide-background">
+                <div class="slide-overlay"></div>
+                <div class="slide-content container">
+                    <div class="exclusivity-badge">
+                        <span class="badge-icon">🌍</span>
+                        <span class="badge-text">EXCLUSIVITÉ AFRIQUE</span>
+                    </div>
+                    <p class="slide-subtitle">Champagne Thomas Pavy</p>
+                    <h1 class="slide-title">Tradition</h1>
+                    <p class="slide-description">
+                        Assemblage classique Pinot Noir, Pinot Meunier et Chardonnay. 
+                        Notes fraîches et florales, douceur de pommes et poires.
+                    </p>
+                    <div class="slide-actions">
+                        <a href="champagnes.html" class="btn btn-primary btn-large">Découvrir la Collection</a>
+                        <a href="contact.html" class="btn btn-gold btn-large">Demander un Devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SLIDE 2 - PRESTIGE -->
+            <div class="carousel-slide">
+                <img src="prestige-scene.jpg" alt="Champagne Thomas Pavy Prestige" class="slide-background">
+                <div class="slide-overlay"></div>
+                <div class="slide-content container">
+                    <div class="exclusivity-badge">
+                        <span class="badge-icon">🌍</span>
+                        <span class="badge-text">EXCLUSIVITÉ AFRIQUE</span>
+                    </div>
+                    <p class="slide-subtitle">Champagne Thomas Pavy</p>
+                    <h1 class="slide-title">Prestige</h1>
+                    <p class="slide-description">
+                        Assemblage au pressoir pour un parfait mélange des arômes. 
+                        Notes de fruits jaunes avec longueur en bouche exceptionnelle.
+                    </p>
+                    <div class="slide-actions">
+                        <a href="champagnes.html" class="btn btn-primary btn-large">Découvrir la Collection</a>
+                        <a href="contact.html" class="btn btn-gold btn-large">Demander un Devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SLIDE 3 - ROSÉ -->
+            <div class="carousel-slide">
+                <img src="rose-scene.jpg" alt="Champagne Thomas Pavy Rosé" class="slide-background">
+                <div class="slide-overlay"></div>
+                <div class="slide-content container">
+                    <div class="exclusivity-badge">
+                        <span class="badge-icon">🌍</span>
+                        <span class="badge-text">EXCLUSIVITÉ AFRIQUE</span>
+                    </div>
+                    <p class="slide-subtitle">Champagne Thomas Pavy</p>
+                    <h1 class="slide-title">Rosé</h1>
+                    <p class="slide-description">
+                        Naturellement rosé par macération des grains de raisin. 
+                        Arôme fruité sur des notes de fraise au nez, élégant et raffiné.
+                    </p>
+                    <div class="slide-actions">
+                        <a href="champagnes.html" class="btn btn-primary btn-large">Découvrir la Collection</a>
+                        <a href="contact.html" class="btn btn-gold btn-large">Demander un Devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SLIDE 4 - EPHÉMÈRE -->
+            <div class="carousel-slide">
+                <img src="ephemere-scene.jpg" alt="Champagne Thomas Pavy Ephémère" class="slide-background">
+                <div class="slide-overlay"></div>
+                <div class="slide-content container">
+                    <div class="exclusivity-badge">
+                        <span class="badge-icon">🌍</span>
+                        <span class="badge-text">EXCLUSIVITÉ AFRIQUE</span>
+                    </div>
+                    <p class="slide-subtitle">Champagne Thomas Pavy</p>
+                    <h1 class="slide-title">Ephémère</h1>
+                    <p class="slide-description">
+                        100% Chardonnay millésimé 2023, mono-parcellaire. 
+                        Notes fraîches de citron vert et yuzu légèrement pâtissées.
+                    </p>
+                    <div class="slide-actions">
+                        <a href="champagnes.html" class="btn btn-primary btn-large">Découvrir la Collection</a>
+                        <a href="contact.html" class="btn btn-gold btn-large">Demander un Devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SLIDE 5 - HARMONY -->
+            <div class="carousel-slide">
+                <img src="harmony-scene.jpg" alt="Champagne Thomas Pavy Harmony" class="slide-background">
+                <div class="slide-overlay"></div>
+                <div class="slide-content container">
+                    <div class="exclusivity-badge">
+                        <span class="badge-icon">🌍</span>
+                        <span class="badge-text">EXCLUSIVITÉ AFRIQUE</span>
+                    </div>
+                    <p class="slide-subtitle">Champagne Thomas Pavy</p>
+                    <h1 class="slide-title">Harmony</h1>
+                    <p class="slide-description">
+                        Brut Nature sans sucre ajouté. Élevage 6 mois en fût, 
+                        personnalisation du dosage pour une expérience unique.
+                    </p>
+                    <div class="slide-actions">
+                        <a href="champagnes.html" class="btn btn-primary btn-large">Découvrir la Collection</a>
+                        <a href="contact.html" class="btn btn-gold btn-large">Demander un Devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NAVIGATION CONTROLS -->
+            <button class="carousel-control prev" onclick="changeSlide(-1)">
+                <span>‹</span>
+            </button>
+            <button class="carousel-control next" onclick="changeSlide(1)">
+                <span>›</span>
+            </button>
+            
+            <!-- INDICATORS -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+                <span class="indicator" onclick="goToSlide(3)"></span>
+                <span class="indicator" onclick="goToSlide(4)"></span>
             </div>
         </div>
     </section>
@@ -74,23 +486,22 @@
                 <p class="section-subtitle">Bienvenue chez KSTP Premium</p>
                 <h2 class="section-title">Votre expert en vente en gros de champagnes et vins à Reims</h2>
                 <p class="section-description">
-                    Nous proposons une large sélection de champagnes prestigieux, vins rouges, vins blancs et vins rosés, 
-                    soigneusement sélectionnés pour répondre aux besoins des professionnels et des revendeurs.
+                    Distributeur exclusif des Champagnes Thomas Pavy pour toute l'Afrique. 
+                    Nous proposons également une large sélection de vins rouges, vins blancs et vins rosés premium.
                 </p>
             </div>
             
             <div style="max-width: 900px; margin: 0 auto; text-align: center;">
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                    Basés au cœur de la région viticole champenoise, nous mettons un point d'honneur à offrir des produits 
-                    authentiques, de qualité supérieure, au meilleur prix du marché. Que vous cherchiez du <strong>champagne brut</strong>, 
-                    <strong>millésimé</strong>, du <strong>vin rouge intense</strong>, du <strong>vin blanc frais</strong> ou un 
-                    <strong>vin rosé fruité</strong>, notre catalogue complet est là pour satisfaire toutes vos exigences.
+                    Basés au cœur de la région viticole champenoise à Reims, nous mettons un point d'honneur à offrir des produits 
+                    authentiques, de qualité supérieure, au meilleur prix du marché. KSTP Premium a obtenu l'exclusivité de distribution 
+                    des prestigieux <strong>champagnes Thomas Pavy</strong> pour tout le continent africain.
                 </p>
                 
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
                     Profitez d'un service client personnalisé, de livraisons rapides et fiables, et d'offres exclusives adaptées 
                     à la vente en gros. Faites confiance à <strong>KSTP Premium</strong>, votre partenaire incontournable pour la 
-                    distribution de champagnes et vins en gros à Reims et dans toute la France.
+                    distribution de champagnes et vins en gros à Reims et en Afrique.
                 </p>
                 
                 <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">
@@ -115,9 +526,10 @@
                         <span style="font-size: 5rem; color: var(--color-gold);">🍾</span>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Champagnes Premium</h3>
+                        <h3 class="card-title">Champagnes Thomas Pavy</h3>
                         <p class="card-text">
-                            Champagnes brut, rosé et millésimés en gros. Cuvées d'exception issues des meilleurs terroirs champenois.
+                            Exclusivité Afrique : Tradition, Prestige, Rosé, Ephémère, Harmony. 
+                            Cuvées d'exception issues des meilleurs terroirs champenois.
                         </p>
                         <a href="champagnes.html" class="btn btn-gold">Découvrir</a>
                     </div>
@@ -165,6 +577,16 @@
             <div class="cards-grid">
                 <div class="card">
                     <div class="card-content">
+                        <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">🌍</div>
+                        <h3 class="card-title">Exclusivité Afrique</h3>
+                        <p class="card-text">
+                            Distributeur exclusif Champagnes Thomas Pavy pour tout le continent africain.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
                         <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">✓</div>
                         <h3 class="card-title">Sélection Rigoureuse</h3>
                         <p class="card-text">
@@ -178,7 +600,7 @@
                         <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">🚚</div>
                         <h3 class="card-title">Livraison Rapide</h3>
                         <p class="card-text">
-                            Service de livraison rapide et fiable pour la vente en gros partout en France.
+                            Service de livraison rapide et fiable pour la vente en gros partout en Afrique et France.
                         </p>
                     </div>
                 </div>
@@ -212,141 +634,6 @@
                         </p>
                     </div>
                 </div>
-                
-                <div class="card">
-                    <div class="card-content">
-                        <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">📋</div>
-                        <h3 class="card-title">Devis Sur Mesure</h3>
-                        <p class="card-text">
-                            Demandez un devis personnalisé adapté à vos besoins et volumes de commande.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- SECTION TÉMOIGNAGES CLIENTS -->
-    <section class="section" id="temoignages">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">Ils Nous Font Confiance</p>
-                <h2 class="section-title">Témoignages de Nos Clients Professionnels</h2>
-                <p class="section-description">
-                    Découvrez les avis de nos partenaires revendeurs et professionnels qui travaillent avec KSTP Premium.
-                </p>
-            </div>
-            
-            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <!-- Avis 1 -->
-                <div class="card">
-                    <div class="card-content">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-gold), #DAA520); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
-                                JM
-                            </div>
-                            <div>
-                                <h4 style="color: var(--color-primary); margin: 0;">Jean-Marc Dupont</h4>
-                                <p style="margin: 0; font-size: 0.9rem; color: var(--color-gray);">Caviste à Paris</p>
-                            </div>
-                        </div>
-                        <div style="color: var(--color-gold); font-size: 1.5rem; margin-bottom: 1rem;">
-                            ★★★★★
-                        </div>
-                        <p style="font-style: italic; color: var(--color-gray); line-height: 1.7; margin: 0;">
-                            "Excellent rapport qualité-prix ! La sélection de champagnes est remarquable et le service client très réactif. 
-                            Nos clients sont ravis de la qualité des produits. Je recommande vivement KSTP Premium."
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Avis 2 -->
-                <div class="card">
-                    <div class="card-content">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
-                                SL
-                            </div>
-                            <div>
-                                <h4 style="color: var(--color-primary); margin: 0;">Sophie Laurent</h4>
-                                <p style="margin: 0; font-size: 0.9rem; color: var(--color-gray);">Restaurant gastronomique</p>
-                            </div>
-                        </div>
-                        <div style="color: var(--color-gold); font-size: 1.5rem; margin-bottom: 1rem;">
-                            ★★★★★
-                        </div>
-                        <p style="font-style: italic; color: var(--color-gray); line-height: 1.7; margin: 0;">
-                            "Partenaire de confiance depuis 2 ans. Les champagnes millésimés sont d'une qualité exceptionnelle. 
-                            Livraison toujours rapide et soignée. Parfait pour notre carte des vins premium."
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Avis 3 -->
-                <div class="card">
-                    <div class="card-content">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-gold), #DAA520); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
-                                PM
-                            </div>
-                            <div>
-                                <h4 style="color: var(--color-primary); margin: 0;">Pierre Martin</h4>
-                                <p style="margin: 0; font-size: 0.9rem; color: var(--color-gray);">Grossiste en Belgique</p>
-                            </div>
-                        </div>
-                        <div style="color: var(--color-gold); font-size: 1.5rem; margin-bottom: 1rem;">
-                            ★★★★★
-                        </div>
-                        <p style="font-style: italic; color: var(--color-gray); line-height: 1.7; margin: 0;">
-                            "Des tarifs très compétitifs pour une qualité au rendez-vous. L'équipe est professionnelle et à l'écoute. 
-                            Les conditions de paiement sont flexibles, ce qui facilite notre collaboration."
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Avis 4 -->
-                <div class="card">
-                    <div class="card-content">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
-                                AB
-                            </div>
-                            <div>
-                                <h4 style="color: var(--color-primary); margin: 0;">Antoine Bernard</h4>
-                                <p style="margin: 0; font-size: 0.9rem; color: var(--color-gray);">Hôtel 4 étoiles</p>
-                            </div>
-                        </div>
-                        <div style="color: var(--color-gold); font-size: 1.5rem; margin-bottom: 1rem;">
-                            ★★★★★
-                        </div>
-                        <p style="font-style: italic; color: var(--color-gray); line-height: 1.7; margin: 0;">
-                            "KSTP Premium nous fournit en champagnes et vins pour nos événements. Produits authentiques, 
-                            service irréprochable. Nos clients apprécient particulièrement la sélection de vins rosés."
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Avis 5 -->
-                <div class="card">
-                    <div class="card-content">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-gold), #DAA520); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
-                                CD
-                            </div>
-                            <div>
-                                <h4 style="color: var(--color-primary); margin: 0;">Catherine Dubois</h4>
-                                <p style="margin: 0; font-size: 0.9rem; color: var(--color-gray);">Épicerie fine à Lyon</p>
-                            </div>
-                        </div>
-                        <div style="color: var(--color-gold); font-size: 1.5rem; margin-bottom: 1rem;">
-                            ★★★★★
-                        </div>
-                        <p style="font-style: italic; color: var(--color-gray); line-height: 1.7; margin: 0;">
-                            "Une vraie découverte ! La proximité avec les producteurs champenois se ressent dans la qualité. 
-                            Devis personnalisé et conseil expert. Je recommande à tous les professionnels du secteur."
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -355,14 +642,15 @@
     <section class="section" id="cta" style="background: linear-gradient(135deg, var(--color-cream), white);">
         <div class="container text-center">
             <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; color: var(--color-primary);">
-                Prêt à développer votre activité ?
+                Prêt à développer votre activité en Afrique ?
             </h2>
             <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem; color: var(--color-gray);">
-                Contactez-nous dès aujourd'hui pour découvrir nos tarifs compétitifs et nos conditions avantageuses.
+                Devenez revendeur exclusif Champagnes Thomas Pavy dans votre région. 
+                Contactez-nous pour découvrir nos conditions privilégiées.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="contact.html" class="btn btn-primary">Demander un Devis</a>
-                <a href="champagnes.html" class="btn btn-gold">Voir le Catalogue</a>
+                <a href="champagnes.html" class="btn btn-gold">Voir le Catalogue Thomas Pavy</a>
             </div>
         </div>
     </section>
@@ -375,8 +663,8 @@
                 <div class="footer-section">
                     <h3>KSTP Premium</h3>
                     <p>
-                        Votre expert en vente en gros de champagnes et vins d'exception à Reims. 
-                        Qualité, tradition et service personnalisé.
+                        Distributeur exclusif Champagnes Thomas Pavy pour l'Afrique. 
+                        Votre expert en vente en gros de champagnes et vins d'exception à Reims.
                     </p>
                 </div>
                 
@@ -385,7 +673,7 @@
                     <h3>Liens Rapides</h3>
                     <a href="index.html">Accueil</a>
                     <a href="about.html">À Propos</a>
-                    <a href="champagnes.html">Nos Champagnes</a>
+                    <a href="champagnes.html">Champagnes Thomas Pavy</a>
                     <a href="vins.html">Nos Vins</a>
                     <a href="contact.html">Contact</a>
                 </div>
@@ -414,7 +702,7 @@
             
             <div class="footer-bottom">
                 <p>
-                    © 2025 KSTP Premium - Tous droits réservés | 
+                    © 2025 KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique | 
                     Site développé par <a href="https://w2k-digital.com" target="_blank">W2K Digital</a>
                 </p>
             </div>
@@ -423,6 +711,97 @@
     
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    
+    <!-- Carousel JavaScript -->
+    <script>
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let autoSlideInterval;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        
+        currentSlide = index;
+    }
+
+    function changeSlide(direction) {
+        let newIndex = currentSlide + direction;
+        
+        if (newIndex >= slides.length) {
+            newIndex = 0;
+        } else if (newIndex < 0) {
+            newIndex = slides.length - 1;
+        }
+        
+        showSlide(newIndex);
+        resetAutoSlide();
+    }
+
+    function goToSlide(index) {
+        showSlide(index);
+        resetAutoSlide();
+    }
+
+    function autoSlide() {
+        let nextIndex = currentSlide + 1;
+        if (nextIndex >= slides.length) {
+            nextIndex = 0;
+        }
+        showSlide(nextIndex);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(autoSlide, 5000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        resetAutoSlide();
+    });
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.addEventListener('mouseenter', function() {
+        clearInterval(autoSlideInterval);
+    });
+    carouselContainer.addEventListener('mouseleave', function() {
+        resetAutoSlide();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            changeSlide(-1);
+        } else if (e.key === 'ArrowRight') {
+            changeSlide(1);
+        }
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselContainer.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carouselContainer.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            changeSlide(1);
+        }
+        if (touchEndX > touchStartX + 50) {
+            changeSlide(-1);
+        }
+    }
+    </script>
     
 </body>
 </html>
