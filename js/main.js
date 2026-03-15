@@ -1,6 +1,7 @@
 // ============================================
 // KSTP PREMIUM - JAVASCRIPT
 // Animations & Interactions
+// W2K-Digital 2025
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -155,6 +156,103 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.card, .product-card, .section-header');
     animateElements.forEach(el => observer.observe(el));
     
+    // ===================================================
+    // CAROUSEL CHAMPAGNES THOMAS PAVY (MANUEL UNIQUEMENT)
+    // Pas d'auto-scroll - Navigation manuelle seulement
+    // ===================================================
+    
+    if (document.querySelector('.carousel-slide')) {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        // Afficher une slide spécifique
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+
+        // Changer de slide (direction : -1 ou +1)
+        function changeSlide(direction) {
+            let newIndex = currentSlide + direction;
+            
+            if (newIndex >= slides.length) {
+                newIndex = 0;
+            } else if (newIndex < 0) {
+                newIndex = slides.length - 1;
+            }
+            
+            showSlide(newIndex);
+        }
+
+        // Aller directement à une slide
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Navigation clavier (flèches gauche/droite)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeSlide(1);
+            }
+        });
+
+        // Support swipe tactile mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const carouselContainer = document.querySelector('.carousel-container');
+
+        if (carouselContainer) {
+            carouselContainer.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            carouselContainer.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                changeSlide(1); // Swipe gauche = slide suivante
+            }
+            if (touchEndX > touchStartX + 50) {
+                changeSlide(-1); // Swipe droite = slide précédente
+            }
+        }
+
+        // Exposer les fonctions globalement pour les boutons onclick HTML
+        window.changeSlide = changeSlide;
+        window.goToSlide = goToSlide;
+    }
+    
+    // ===================================================
+    // AFFICHAGE CONDITIONNEL CHAMPAGNES THOMAS PAVY
+    // Formulaire contact - checkboxes champagnes
+    // ===================================================
+    
+    const typeProduits = document.getElementById('type_produits');
+    const champagnesDetails = document.getElementById('champagnes-thomas-pavy-details');
+
+    if (typeProduits && champagnesDetails) {
+        typeProduits.addEventListener('change', function() {
+            if (this.value === 'champagnes_thomas_pavy') {
+                champagnesDetails.style.display = 'block';
+            } else {
+                champagnesDetails.style.display = 'none';
+            }
+        });
+    }
+    
     // === VALIDATION FORMULAIRE ===
     const contactForm = document.querySelector('#contact-form');
     
@@ -171,7 +269,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const societe = formData.get('societe');
             const email = formData.get('email');
             const tel = formData.get('tel');
-            const produits = formData.get('produits');
+            const typeProduit = formData.get('type_produits');
+            const paysLivraison = formData.get('pays_livraison');
             const message = formData.get('message');
             
             if (!societe || societe.trim() === '') {
@@ -189,9 +288,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorMessage += 'Le téléphone est requis.\n';
             }
             
-            if (!produits || produits === '') {
+            if (!typeProduit || typeProduit === '') {
                 isValid = false;
-                errorMessage += 'Veuillez sélectionner un produit.\n';
+                errorMessage += 'Veuillez sélectionner un type de produit.\n';
+            }
+            
+            if (!paysLivraison || paysLivraison.trim() === '') {
+                isValid = false;
+                errorMessage += 'Le pays de livraison est requis.\n';
             }
             
             if (!message || message.trim().length < 10) {
@@ -200,9 +304,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Simuler l'envoi (remplacer par votre logique d'envoi réelle)
                 alert('✅ Merci ! Votre demande de devis a été envoyée avec succès.\n\nNous vous répondrons dans les plus brefs délais.');
                 contactForm.reset();
+                // Cacher les détails champagnes après reset
+                if (champagnesDetails) {
+                    champagnesDetails.style.display = 'none';
+                }
             } else {
                 alert('❌ Erreur de validation :\n\n' + errorMessage);
             }
@@ -227,7 +334,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // === COUNTER ANIMATION (si besoin sur stats) ===
-    function animateCounter(element, target, duration = 2000) {
+    function animateCounter(element, target, duration) {
+        duration = duration || 2000;
         let current = 0;
         const increment = target / (duration / 16);
         const timer = setInterval(() => {
@@ -241,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
     
-    // === LOADING IMAGES AVEC LAZY LOADING ===
+    // === LAZY LOADING IMAGES ===
     const images = document.querySelectorAll('img[data-src]');
     
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -308,22 +416,6 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollTopBtn.style.transform = 'translateY(0)';
         scrollTopBtn.style.boxShadow = '0 4px 15px rgba(139, 0, 0, 0.3)';
     });
-    
-    // === ANIMATION TEXTE TYPING (optionnel) ===
-    function typeWriter(element, text, speed = 50) {
-        let i = 0;
-        element.textContent = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        
-        type();
-    }
     
     // === PRELOADER (optionnel) ===
     window.addEventListener('load', function() {
