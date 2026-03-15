@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy pour l'Afrique. Vente en gros Champagne et Vins à Reims.">
-    <meta name="keywords" content="champagne thomas pavy, champagne gros afrique, vin gros, reims, champagne millésimé, exclusivité afrique, grossiste champagne">
+    <meta name="keywords" content="champagne thomas pavy, champagne gros afrique, exclusivité afrique, vin gros, reims, champagne millésimé, grossiste champagne">
     <meta name="author" content="KSTP Premium">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shop.kstp-premium.com/">
-    <meta property="og:title" content="KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique">
-    <meta property="og:description" content="Exclusivité Afrique : Champagnes Thomas Pavy en vente en gros. Votre expert champagnes et vins d'exception à Reims.">
+    <meta property="og:title" content="KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique | Vente en Gros Reims">
+    <meta property="og:description" content="Distributeur exclusif Champagnes Thomas Pavy pour l'Afrique. Vente en gros champagnes et vins d'exception à Reims.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -25,300 +25,283 @@
     <link rel="stylesheet" href="css/style.css">
     
     <title>KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique | Vente en Gros Reims</title>
-    
+
+    <!-- CSS Carousel Thomas Pavy -->
     <style>
-    /* ===== HERO CAROUSEL THOMAS PAVY - EXCLUSIVITÉ AFRIQUE ===== */
-    
-    .thomas-pavy-hero {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        min-height: 700px;
-        overflow: hidden;
-        margin-top: 80px;
-    }
+        /* Carousel Thomas Pavy - Exclusivité Afrique */
+        .thomas-pavy-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
+            margin-top: 80px;
+        }
 
-    .carousel-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
 
-    .carousel-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-        z-index: 1;
-    }
-
-    .carousel-slide.active {
-        opacity: 1;
-        z-index: 2;
-    }
-
-    .slide-background {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .slide-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(139, 0, 0, 0.85) 0%, rgba(26, 26, 26, 0.7) 100%);
-        z-index: 1;
-    }
-
-    .slide-content {
-        position: relative;
-        z-index: 2;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        padding: 2rem;
-        animation: slideContentFadeIn 1s ease-out;
-    }
-
-    @keyframes slideContentFadeIn {
-        from {
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             opacity: 0;
-            transform: translateY(30px);
+            transition: opacity 1s ease-in-out;
+            z-index: 1;
         }
-        to {
+
+        .carousel-slide.active {
             opacity: 1;
-            transform: translateY(0);
+            z-index: 2;
         }
-    }
 
-    .exclusivity-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: var(--color-gold);
-        color: var(--color-dark);
-        padding: 0.7rem 1.5rem;
-        border-radius: 50px;
-        font-weight: 700;
-        font-size: 0.9rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
-        animation: badgePulse 2s ease-in-out infinite;
-    }
+        .slide-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-    @keyframes badgePulse {
-        0%, 100% {
-            transform: scale(1);
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.85) 0%, rgba(26, 26, 26, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .exclusivity-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-gold);
+            color: var(--color-dark);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
         }
-        50% {
-            transform: scale(1.05);
-            box-shadow: 0 6px 30px rgba(212, 175, 55, 0.6);
+
+        .badge-icon {
+            font-size: 1.3rem;
         }
-    }
 
-    .badge-icon {
-        font-size: 1.3rem;
-    }
-
-    .slide-subtitle {
-        font-size: 1.3rem;
-        color: var(--color-gold);
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 500;
-    }
-
-    .slide-title {
-        font-family: var(--font-primary);
-        font-size: clamp(3.5rem, 8vw, 6rem);
-        font-weight: 900;
-        color: white;
-        margin-bottom: 1.5rem;
-        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
-        line-height: 1.1;
-    }
-
-    .slide-description {
-        font-size: 1.3rem;
-        color: rgba(255, 255, 255, 0.95);
-        max-width: 700px;
-        margin: 0 auto 3rem;
-        line-height: 1.8;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .slide-actions {
-        display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .btn-large {
-        padding: 1.2rem 3rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-
-    .btn-large:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .carousel-control {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 10;
-        transition: all 0.3s ease;
-        font-size: 2rem;
-    }
-
-    .carousel-control:hover {
-        background: var(--color-gold);
-        border-color: var(--color-gold);
-        color: var(--color-dark);
-        transform: translateY(-50%) scale(1.1);
-    }
-
-    .carousel-control.prev {
-        left: 2rem;
-    }
-
-    .carousel-control.next {
-        right: 2rem;
-    }
-
-    .carousel-indicators {
-        position: absolute;
-        bottom: 3rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 1rem;
-        z-index: 10;
-    }
-
-    .indicator {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.4);
-        border: 2px solid rgba(255, 255, 255, 0.6);
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .indicator:hover {
-        background: rgba(255, 255, 255, 0.7);
-        transform: scale(1.2);
-    }
-
-    .indicator.active {
-        background: var(--color-gold);
-        border-color: var(--color-gold);
-        width: 40px;
-        border-radius: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .thomas-pavy-hero {
-            height: 85vh;
-            min-height: 600px;
-            margin-top: 70px;
-        }
-        
-        .slide-title {
-            font-size: clamp(2.5rem, 10vw, 4rem);
-        }
-        
-        .slide-description {
-            font-size: 1.1rem;
-            padding: 0 1rem;
-        }
-        
-        .slide-actions {
-            flex-direction: column;
-            width: 100%;
-            padding: 0 2rem;
-        }
-        
-        .btn-large {
-            width: 100%;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-        }
-        
-        .carousel-control {
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-        }
-        
-        .carousel-control.prev {
-            left: 1rem;
-        }
-        
-        .carousel-control.next {
-            right: 1rem;
-        }
-        
-        .exclusivity-badge {
-            font-size: 0.75rem;
-            padding: 0.5rem 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
         .slide-subtitle {
-            font-size: 1rem;
+            font-size: 1.3rem;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 500;
         }
-        
+
+        .slide-title {
+            font-family: var(--font-primary);
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+        }
+
+        .slide-description {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-actions {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contrôles carousel */
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            font-size: 2rem;
+        }
+
+        .carousel-control:hover {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            color: var(--color-dark);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-control.prev {
+            left: 2rem;
+        }
+
+        .carousel-control.next {
+            right: 2rem;
+        }
+
+        /* Indicateurs */
         .carousel-indicators {
-            bottom: 2rem;
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 10;
         }
-        
+
         .indicator {
-            width: 10px;
-            height: 10px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-        
+
+        .indicator:hover {
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(1.2);
+        }
+
         .indicator.active {
-            width: 30px;
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            width: 40px;
+            border-radius: 10px;
         }
-    }
+
+        /* Responsive carousel */
+        @media (max-width: 768px) {
+            .thomas-pavy-hero {
+                height: 85vh;
+                min-height: 600px;
+                margin-top: 70px;
+            }
+            
+            .slide-title {
+                font-size: clamp(2.5rem, 10vw, 4rem);
+            }
+            
+            .slide-description {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .slide-actions {
+                flex-direction: column;
+                width: 100%;
+                padding: 0 2rem;
+            }
+            
+            .btn-large {
+                width: 100%;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .carousel-control {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .carousel-control.prev {
+                left: 1rem;
+            }
+            
+            .carousel-control.next {
+                right: 1rem;
+            }
+            
+            .exclusivity-badge {
+                font-size: 0.75rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thomas-pavy-hero {
+                margin-top: 65px;
+            }
+
+            .slide-subtitle {
+                font-size: 1rem;
+            }
+            
+            .carousel-indicators {
+                bottom: 2rem;
+            }
+            
+            .indicator {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .indicator.active {
+                width: 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -350,9 +333,9 @@
     <section class="thomas-pavy-hero">
         <div class="carousel-container">
             
-            <!-- SLIDE 1 - TRADITION -->
+            <!-- SLIDE 1 - TRADITION (ACTIVE PAR DÉFAUT) -->
             <div class="carousel-slide active">
-                <img src="tradition-scene.jpg" alt="Champagne Thomas Pavy Tradition" class="slide-background">
+                <img src="tradition-scene.jpg" alt="Champagne Thomas Pavy Tradition - Exclusivité Afrique" class="slide-background">
                 <div class="slide-overlay"></div>
                 <div class="slide-content container">
                     <div class="exclusivity-badge">
@@ -374,7 +357,7 @@
             
             <!-- SLIDE 2 - PRESTIGE -->
             <div class="carousel-slide">
-                <img src="prestige-scene.jpg" alt="Champagne Thomas Pavy Prestige" class="slide-background">
+                <img src="prestige-scene.jpg" alt="Champagne Thomas Pavy Prestige - Exclusivité Afrique" class="slide-background">
                 <div class="slide-overlay"></div>
                 <div class="slide-content container">
                     <div class="exclusivity-badge">
@@ -396,7 +379,7 @@
             
             <!-- SLIDE 3 - ROSÉ -->
             <div class="carousel-slide">
-                <img src="rose-scene.jpg" alt="Champagne Thomas Pavy Rosé" class="slide-background">
+                <img src="rose-scene.jpg" alt="Champagne Thomas Pavy Rosé - Exclusivité Afrique" class="slide-background">
                 <div class="slide-overlay"></div>
                 <div class="slide-content container">
                     <div class="exclusivity-badge">
@@ -418,7 +401,7 @@
             
             <!-- SLIDE 4 - EPHÉMÈRE -->
             <div class="carousel-slide">
-                <img src="ephemere-scene.jpg" alt="Champagne Thomas Pavy Ephémère" class="slide-background">
+                <img src="ephemere-scene.jpg" alt="Champagne Thomas Pavy Ephémère - Exclusivité Afrique" class="slide-background">
                 <div class="slide-overlay"></div>
                 <div class="slide-content container">
                     <div class="exclusivity-badge">
@@ -440,7 +423,7 @@
             
             <!-- SLIDE 5 - HARMONY -->
             <div class="carousel-slide">
-                <img src="harmony-scene.jpg" alt="Champagne Thomas Pavy Harmony" class="slide-background">
+                <img src="harmony-scene.jpg" alt="Champagne Thomas Pavy Harmony - Exclusivité Afrique" class="slide-background">
                 <div class="slide-overlay"></div>
                 <div class="slide-content container">
                     <div class="exclusivity-badge">
@@ -460,21 +443,21 @@
                 </div>
             </div>
             
-            <!-- NAVIGATION CONTROLS -->
-            <button class="carousel-control prev" onclick="changeSlide(-1)">
+            <!-- CONTRÔLES NAVIGATION -->
+            <button class="carousel-control prev" onclick="changeSlide(-1)" aria-label="Champagne précédent">
                 <span>‹</span>
             </button>
-            <button class="carousel-control next" onclick="changeSlide(1)">
+            <button class="carousel-control next" onclick="changeSlide(1)" aria-label="Champagne suivant">
                 <span>›</span>
             </button>
             
-            <!-- INDICATORS -->
+            <!-- INDICATEURS -->
             <div class="carousel-indicators">
-                <span class="indicator active" onclick="goToSlide(0)"></span>
-                <span class="indicator" onclick="goToSlide(1)"></span>
-                <span class="indicator" onclick="goToSlide(2)"></span>
-                <span class="indicator" onclick="goToSlide(3)"></span>
-                <span class="indicator" onclick="goToSlide(4)"></span>
+                <span class="indicator active" onclick="goToSlide(0)" aria-label="Tradition"></span>
+                <span class="indicator" onclick="goToSlide(1)" aria-label="Prestige"></span>
+                <span class="indicator" onclick="goToSlide(2)" aria-label="Rosé"></span>
+                <span class="indicator" onclick="goToSlide(3)" aria-label="Ephémère"></span>
+                <span class="indicator" onclick="goToSlide(4)" aria-label="Harmony"></span>
             </div>
         </div>
     </section>
@@ -484,28 +467,30 @@
         <div class="container">
             <div class="section-header">
                 <p class="section-subtitle">Bienvenue chez KSTP Premium</p>
-                <h2 class="section-title">Votre expert en vente en gros de champagnes et vins à Reims</h2>
+                <h2 class="section-title">Distributeur Exclusif Champagnes Thomas Pavy pour l'Afrique</h2>
                 <p class="section-description">
-                    Distributeur exclusif des Champagnes Thomas Pavy pour toute l'Afrique. 
-                    Nous proposons également une large sélection de vins rouges, vins blancs et vins rosés premium.
+                    KSTP Premium a l'honneur d'être le distributeur exclusif des Champagnes Thomas Pavy 
+                    pour tout le continent africain. Nous proposons également une sélection premium 
+                    de vins rouges, blancs et rosés pour professionnels.
                 </p>
             </div>
             
             <div style="max-width: 900px; margin: 0 auto; text-align: center;">
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                    Basés au cœur de la région viticole champenoise à Reims, nous mettons un point d'honneur à offrir des produits 
-                    authentiques, de qualité supérieure, au meilleur prix du marché. KSTP Premium a obtenu l'exclusivité de distribution 
-                    des prestigieux <strong>champagnes Thomas Pavy</strong> pour tout le continent africain.
+                    Basés au cœur de Reims, capitale de la Champagne, nous distribuons en exclusivité 
+                    les 5 cuvées exceptionnelles de la maison <strong>Thomas Pavy</strong> : Tradition, 
+                    Prestige, Rosé, Ephémère et Harmony. Des champagnes d'exception pour restaurants, 
+                    hôtels, cavistes et distributeurs africains.
                 </p>
                 
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                    Profitez d'un service client personnalisé, de livraisons rapides et fiables, et d'offres exclusives adaptées 
-                    à la vente en gros. Faites confiance à <strong>KSTP Premium</strong>, votre partenaire incontournable pour la 
-                    distribution de champagnes et vins en gros à Reims et en Afrique.
+                    Profitez de tarifs grossistes compétitifs, d'une logistique internationale fiable 
+                    et d'un accompagnement personnalisé. Faites confiance à <strong>KSTP Premium</strong>, 
+                    votre partenaire exclusif Champagnes Thomas Pavy en Afrique.
                 </p>
                 
                 <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">
-                    Contactez-nous pour un devis
+                    Demander un Devis
                 </a>
             </div>
         </div>
@@ -520,7 +505,7 @@
             </div>
             
             <div class="cards-grid">
-                <!-- Champagnes -->
+                <!-- Champagnes Thomas Pavy -->
                 <div class="card">
                     <div class="card-image" style="background: linear-gradient(135deg, rgba(139,0,0,0.1), rgba(212,175,55,0.1)); display: flex; align-items: center; justify-content: center; height: 250px;">
                         <span style="font-size: 5rem; color: var(--color-gold);">🍾</span>
@@ -528,8 +513,8 @@
                     <div class="card-content">
                         <h3 class="card-title">Champagnes Thomas Pavy</h3>
                         <p class="card-text">
-                            Exclusivité Afrique : Tradition, Prestige, Rosé, Ephémère, Harmony. 
-                            Cuvées d'exception issues des meilleurs terroirs champenois.
+                            <strong>Exclusivité Afrique :</strong> Tradition, Prestige, Rosé, Ephémère, Harmony. 
+                            5 cuvées d'exception pour vos clients les plus exigeants.
                         </p>
                         <a href="champagnes.html" class="btn btn-gold">Découvrir</a>
                     </div>
@@ -575,6 +560,7 @@
             </div>
             
             <div class="cards-grid">
+                <!-- Exclusivité Afrique en premier -->
                 <div class="card">
                     <div class="card-content">
                         <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">🌍</div>
@@ -584,7 +570,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-content">
                         <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">✓</div>
@@ -598,9 +584,9 @@
                 <div class="card">
                     <div class="card-content">
                         <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem;">🚚</div>
-                        <h3 class="card-title">Livraison Rapide</h3>
+                        <h3 class="card-title">Livraison Internationale</h3>
                         <p class="card-text">
-                            Service de livraison rapide et fiable pour la vente en gros partout en Afrique et France.
+                            Service de livraison rapide et fiable vers toute l'Afrique et la France.
                         </p>
                     </div>
                 </div>
@@ -642,15 +628,15 @@
     <section class="section" id="cta" style="background: linear-gradient(135deg, var(--color-cream), white);">
         <div class="container text-center">
             <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; color: var(--color-primary);">
-                Prêt à développer votre activité en Afrique ?
+                Développez votre activité avec l'Exclusivité Thomas Pavy
             </h2>
             <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem; color: var(--color-gray);">
-                Devenez revendeur exclusif Champagnes Thomas Pavy dans votre région. 
-                Contactez-nous pour découvrir nos conditions privilégiées.
+                Devenez revendeur exclusif Champagnes Thomas Pavy dans votre région africaine. 
+                Contactez KSTP Premium pour des conditions privilégiées.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="contact.html" class="btn btn-primary">Demander un Devis</a>
-                <a href="champagnes.html" class="btn btn-gold">Voir le Catalogue Thomas Pavy</a>
+                <a href="champagnes.html" class="btn btn-gold">Catalogue Thomas Pavy</a>
             </div>
         </div>
     </section>
@@ -673,7 +659,7 @@
                     <h3>Liens Rapides</h3>
                     <a href="index.html">Accueil</a>
                     <a href="about.html">À Propos</a>
-                    <a href="champagnes.html">Champagnes Thomas Pavy</a>
+                    <a href="champagnes.html">Nos Champagnes</a>
                     <a href="vins.html">Nos Vins</a>
                     <a href="contact.html">Contact</a>
                 </div>
@@ -702,7 +688,7 @@
             
             <div class="footer-bottom">
                 <p>
-                    © 2025 KSTP Premium - Distributeur Exclusif Champagnes Thomas Pavy Afrique | 
+                    © 2025 KSTP Premium - Tous droits réservés | 
                     Site développé par <a href="https://w2k-digital.com" target="_blank">W2K Digital</a>
                 </p>
             </div>
@@ -711,97 +697,6 @@
     
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    
-    <!-- Carousel JavaScript -->
-    <script>
-    // Carousel functionality
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const indicators = document.querySelectorAll('.indicator');
-    let autoSlideInterval;
-
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
-        
-        slides[index].classList.add('active');
-        indicators[index].classList.add('active');
-        
-        currentSlide = index;
-    }
-
-    function changeSlide(direction) {
-        let newIndex = currentSlide + direction;
-        
-        if (newIndex >= slides.length) {
-            newIndex = 0;
-        } else if (newIndex < 0) {
-            newIndex = slides.length - 1;
-        }
-        
-        showSlide(newIndex);
-        resetAutoSlide();
-    }
-
-    function goToSlide(index) {
-        showSlide(index);
-        resetAutoSlide();
-    }
-
-    function autoSlide() {
-        let nextIndex = currentSlide + 1;
-        if (nextIndex >= slides.length) {
-            nextIndex = 0;
-        }
-        showSlide(nextIndex);
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(autoSlide, 5000);
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        resetAutoSlide();
-    });
-
-    const carouselContainer = document.querySelector('.carousel-container');
-    carouselContainer.addEventListener('mouseenter', function() {
-        clearInterval(autoSlideInterval);
-    });
-    carouselContainer.addEventListener('mouseleave', function() {
-        resetAutoSlide();
-    });
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            changeSlide(-1);
-        } else if (e.key === 'ArrowRight') {
-            changeSlide(1);
-        }
-    });
-
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carouselContainer.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-
-    carouselContainer.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    });
-
-    function handleSwipe() {
-        if (touchEndX < touchStartX - 50) {
-            changeSlide(1);
-        }
-        if (touchEndX > touchStartX + 50) {
-            changeSlide(-1);
-        }
-    }
-    </script>
     
 </body>
 </html>
