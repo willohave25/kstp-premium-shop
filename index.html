@@ -444,20 +444,20 @@
             </div>
             
             <!-- CONTRÔLES NAVIGATION -->
-            <button class="carousel-control prev" onclick="changeSlide(-1)" aria-label="Champagne précédent">
+            <button class="carousel-control prev" id="carousel-prev" aria-label="Champagne précédent">
                 <span>‹</span>
             </button>
-            <button class="carousel-control next" onclick="changeSlide(1)" aria-label="Champagne suivant">
+            <button class="carousel-control next" id="carousel-next" aria-label="Champagne suivant">
                 <span>›</span>
             </button>
             
             <!-- INDICATEURS -->
             <div class="carousel-indicators">
-                <span class="indicator active" onclick="goToSlide(0)" aria-label="Tradition"></span>
-                <span class="indicator" onclick="goToSlide(1)" aria-label="Prestige"></span>
-                <span class="indicator" onclick="goToSlide(2)" aria-label="Rosé"></span>
-                <span class="indicator" onclick="goToSlide(3)" aria-label="Ephémère"></span>
-                <span class="indicator" onclick="goToSlide(4)" aria-label="Harmony"></span>
+                <span class="indicator active" data-slide="0" aria-label="Tradition"></span>
+                <span class="indicator" data-slide="1" aria-label="Prestige"></span>
+                <span class="indicator" data-slide="2" aria-label="Rosé"></span>
+                <span class="indicator" data-slide="3" aria-label="Ephémère"></span>
+                <span class="indicator" data-slide="4" aria-label="Harmony"></span>
             </div>
         </div>
     </section>
