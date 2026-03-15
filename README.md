@@ -106,7 +106,7 @@ Le site est entièrement responsive et optimisé pour :
 
 ## 👨‍💻 Développement
 
-**Développé par W2K Digital** - Agence digitale no-code premium
+**Développé par W2K Digital** - Agence digitale premium
 
 - 🌐 Site web : [w2k-digital.com](https://w2k-digital.com)
 - 📧 Email : contact@w2k-digital.com
