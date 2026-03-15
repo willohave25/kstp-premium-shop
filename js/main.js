@@ -161,39 +161,61 @@ document.addEventListener('DOMContentLoaded', function() {
     // Pas d'auto-scroll - Navigation manuelle seulement
     // ===================================================
     
-    if (document.querySelector('.carousel-slide')) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    
+    if (slides.length > 0) {
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const indicators = document.querySelectorAll('.indicator');
 
         // Afficher une slide spécifique
         function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
+            // Sécurité : vérifier les limites
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            
+            slides.forEach(function(slide) {
+                slide.classList.remove('active');
+            });
+            indicators.forEach(function(ind) {
+                ind.classList.remove('active');
+            });
             
             slides[index].classList.add('active');
-            indicators[index].classList.add('active');
+            if (indicators[index]) {
+                indicators[index].classList.add('active');
+            }
             
             currentSlide = index;
         }
 
         // Changer de slide (direction : -1 ou +1)
         function changeSlide(direction) {
-            let newIndex = currentSlide + direction;
-            
-            if (newIndex >= slides.length) {
-                newIndex = 0;
-            } else if (newIndex < 0) {
-                newIndex = slides.length - 1;
-            }
-            
-            showSlide(newIndex);
+            showSlide(currentSlide + direction);
         }
 
-        // Aller directement à une slide
-        function goToSlide(index) {
-            showSlide(index);
+        // Bouton précédent
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                changeSlide(-1);
+            });
         }
+        
+        // Bouton suivant
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                changeSlide(1);
+            });
+        }
+        
+        // Indicateurs (points cliquables)
+        indicators.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                var slideIndex = parseInt(this.getAttribute('data-slide'));
+                showSlide(slideIndex);
+            });
+        });
 
         // Navigation clavier (flèches gauche/droite)
         document.addEventListener('keydown', function(e) {
@@ -205,10 +227,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Support swipe tactile mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
+        var touchStartX = 0;
+        var touchEndX = 0;
 
-        const carouselContainer = document.querySelector('.carousel-container');
+        var carouselContainer = document.querySelector('.carousel-container');
 
         if (carouselContainer) {
             carouselContainer.addEventListener('touchstart', function(e) {
@@ -217,22 +239,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
             carouselContainer.addEventListener('touchend', function(e) {
                 touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
+                // Swipe gauche = slide suivante
+                if (touchEndX < touchStartX - 50) {
+                    changeSlide(1);
+                }
+                // Swipe droite = slide précédente
+                if (touchEndX > touchStartX + 50) {
+                    changeSlide(-1);
+                }
             });
         }
 
-        function handleSwipe() {
-            if (touchEndX < touchStartX - 50) {
-                changeSlide(1); // Swipe gauche = slide suivante
-            }
-            if (touchEndX > touchStartX + 50) {
-                changeSlide(-1); // Swipe droite = slide précédente
-            }
-        }
-
-        // Exposer les fonctions globalement pour les boutons onclick HTML
+        // Exposer globalement au cas où
         window.changeSlide = changeSlide;
-        window.goToSlide = goToSlide;
+        window.goToSlide = showSlide;
     }
     
     // ===================================================
